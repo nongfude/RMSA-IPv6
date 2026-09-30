@@ -1,0 +1,39 @@
+# RMSA-IPv6 Constellation Configuration - 66 Satellites (Iridium-like)
+
+constellation:
+  name: "Walker_66_6_1"
+  satellites: 66
+  planes: 6
+  altitude_km: 780
+  inclination_deg: 86.4
+  pattern: "Walker Delta"
+
+ground_stations:
+  count: 50
+  min_elevation_deg: 25
+
+user_terminals:
+  count: 100
+
+simulation:
+  duration_seconds: 300
+  time_step_seconds: 1
+  random_seeds: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+rmsa_parameters:
+  multi_homing_degree: 3
+  isolation_forest_trees: 8
+  isolation_forest_subsample: 256
+  anomaly_threshold: 0.65
+  q_learning_alpha: 0.01
+  q_learning_gamma: 0.95
+  key_refresh_interval_sec: 300
+
+network:
+  isl_capacity_gbps: 10
+  isl_max_range_km: 2800
+  user_link_capacity_mbps: [50, 250]
+
+output:
+  results_dir: "results/scalability/"
+  filename: "scale_66_n10_d300s.json"

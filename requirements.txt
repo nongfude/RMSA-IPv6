@@ -1,0 +1,55 @@
+# RMSA-IPv6 Simulation Environment Dependencies
+# Python 3.8+ required
+
+# Core Scientific Computing
+numpy>=1.23.0
+scipy>=1.10.0
+pandas>=1.5.0
+
+# Orbital Mechanics and Constellation Modeling
+skyfield>=1.45                    # SGP4 orbital propagation
+jplephem>=2.18                    # JPL ephemeris data
+
+# Network Simulation and Graph Analysis
+networkx>=2.8.0                   # Graph-based routing algorithms
+simpy>=4.0.0                      # Discrete-event simulation (if used)
+
+# Machine Learning - Anomaly Detection
+scikit-learn>=1.2.0               # Isolation Forest implementation
+joblib>=1.2.0                     # Model serialization
+
+# Cryptography (for latency modeling)
+cryptography>=39.0.0              # Python crypto primitives reference
+
+# Data Visualization
+matplotlib>=3.6.0
+seaborn>=0.12.0
+plotly>=5.13.0                    # Interactive plots (optional)
+
+# Configuration and I/O
+pyyaml>=6.0
+json5>=0.9.0                      # Enhanced JSON parsing
+toml>=0.10.0
+
+# Statistical Analysis
+statsmodels>=0.13.5               # Confidence interval computation
+pingouin>=0.5.3                   # t-test and statistical tests
+
+# Utilities
+tqdm>=4.64.0                      # Progress bars
+colorama>=0.4.6                   # Terminal colors
+tabulate>=0.9.0                   # Table formatting
+
+# Testing and Quality
+pytest>=7.2.0
+pytest-cov>=4.0.0
+black>=23.0.0                     # Code formatter
+flake8>=6.0.0                     # Linter
+
+# Optional: Performance Optimization
+numba>=0.56.0                     # JIT compilation for hot paths
+cython>=0.29.0                    # C extensions for critical loops
+
+# Documentation
+sphinx>=5.3.0                     # Documentation generator
+sphinx-rtd-theme>=1.2.0

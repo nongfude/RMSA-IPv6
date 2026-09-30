@@ -1,0 +1,55 @@
+{
+  "metadata": {
+    "constellation_size": 66,
+    "num_seeds": 10,
+    "duration_seconds": 300,
+    "timestamp": "2026-09-30T10:00:00Z",
+    "config_file": "constellation_66.yaml",
+    "methods_compared": ["SPR", "SMH", "MPTCP", "RMSA"]
+  },
+  "results": {
+    "RMSA": {
+      "availability": {
+        "per_seed": [77.5, 78.1, 77.2, 77.9, 77.4, 77.8, 77.6, 77.3, 78.0, 77.9],
+        "mean": 77.67,
+        "std": 0.41,
+        "ci_95": 0.80,
+        "ci_lower": 76.87,
+        "ci_upper": 78.47
+      },
+      "latency_mean": {
+        "per_seed": [96.5, 97.1, 96.3, 96.9, 96.6, 97.0, 96.8, 96.4, 97.2, 96.9],
+        "mean": 96.77,
+        "std": 0.18,
+        "ci_95": 0.36,
+        "unit": "ms"
+      },
+      "cpu_utilization": {
+        "per_seed": [22.3, 22.5, 22.4, 22.6, 22.4, 22.5, 22.3, 22.4, 22.5, 22.3],
+        "mean": 22.42,
+        "std": 0.08,
+        "ci_95": 0.15,
+        "unit": "percent"
+      }
+    },
+    "SPR": {
+      "availability": {
+        "mean": 79.10,
+        "ci_95": 0.65
+      }
+    },
+    "SMH": {
+      "availability": {
+        "mean": 74.87,
+        "ci_95": 0.85
+      }
+    },
+    "MPTCP": {
+      "availability": {
+        "mean": 77.18,
+        "ci_95": 0.68
+      }
+    }
+  },
+  "note": "Complete experimental data available in full dataset. This is a sample for review purposes."
+}

@@ -1,0 +1,39 @@
+# RMSA-IPv6 Constellation Configuration - 1584 Satellites (Starlink-equivalent)
+
+constellation:
+  name: "Walker_1584_72_1"
+  satellites: 1584
+  planes: 72
+  altitude_km: 780
+  inclination_deg: 86.4
+  pattern: "Walker Delta"
+
+ground_stations:
+  count: 300
+  min_elevation_deg: 25
+
+user_terminals:
+  count: 800
+
+simulation:
+  duration_seconds: 60  # Reduced for computational tractability
+  time_step_seconds: 1
+  random_seeds: [0, 1, 2, 3, 4]  # 5 seeds due to computational constraints
+
+rmsa_parameters:
+  multi_homing_degree: 3
+  isolation_forest_trees: 8
+  isolation_forest_subsample: 256
+  anomaly_threshold: 0.65
+  q_learning_alpha: 0.01
+  q_learning_gamma: 0.95
+  key_refresh_interval_sec: 300
+
+network:
+  isl_capacity_gbps: 10
+  isl_max_range_km: 2800
+  user_link_capacity_mbps: [50, 250]
+
+output:
+  results_dir: "results/scalability/"
+  filename: "scale_1584_n5_d60s.json"
